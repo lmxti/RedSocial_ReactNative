@@ -2,6 +2,7 @@
   "expo": {
     "name": "red-social-react-native-front",
     "slug": "red-social-react-native-front",
+    "scheme": "myapp", 
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,6 +24,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "La aplicacion necesita acceso a tus fotos selecionar imagenes",
+          "cameraPermission": "La aplicacion necesita acceso a tu camara para tomar fotos"
+        }
+      ]
+    ]
   }
 }
