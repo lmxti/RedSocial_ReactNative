@@ -5,7 +5,7 @@ import PostsGrid from "../../../../components/post/PostsGrid";
 import { useProfile } from "../../../../hooks/useProfile";
 
 import { useRouter, useNavigation } from "expo-router";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 import { Logout } from "../../../../components/Icons";
 
@@ -23,12 +23,11 @@ export default function Profile() {
     if (profileData?.username) {
       navigation.setOptions({
         title: `@${profileData.username}`,
-        headerRight: () => (
+        headerRight: () => 
           isOwnProfile && (
             <Pressable className="bg-zinc-900 rounded-full px-4 py-2" onPress={handleLogout} >
               <Logout/>
             </Pressable>
-          )
         ),
       });
     }
